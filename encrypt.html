@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt Message | SecureCrypt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="logo"><i class="fa-solid fa-shield-halved"></i> SecureCrypt</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="encrypt.html">Encrypt</a>
+        <a href="decrypt.html">Decrypt</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<section class="encrypt-page">
+    <div class="encrypt-left">
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Data Protection Locking Process">
+    </div>
+    <div class="encrypt-form">
+        <h2>Encrypt Your Message</h2>
+        <p>Protect your information using AES-256 Encryption.</p>
+        <form>
+            <label>Message</label>
+            <textarea rows="7" placeholder="Type your confidential message here..." required></textarea>
+            <label>Encryption Algorithm</label>
+            <select><option>AES-256</option><option>AES-192</option><option>AES-128</option></select>
+            <label>Secret Key</label>
+            <input type="password" placeholder="Enter Secret Key" required>
+            <div class="buttons">
+                <button class="btn">Encrypt</button>
+                <button type="reset" class="btn-outline">Clear</button>
+            </div>
+        </form>
+        <div class="output">
+            <h3>Encrypted Output</h3>
+            <textarea rows="6" readonly placeholder="Encrypted message will appear here..."></textarea>
+        </div>
+    </div>
+</section>
+<script src="js/script.js"></script>
+</body>
+</html>
