@@ -30,24 +30,30 @@ body {
    2. HEADER & NAVIGATION
    ========================================================================== */
 header {
-    display: flex;
+   display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background-color: var(--secondary-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 18px 8%;
+    background: rgba(34, 40, 49, 0.90);
+    backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
 }
 
 header .logo {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: white;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+header .logo i{
+    color:#00fff2;
+    font-size:2rem;
 }
 
 header nav {
@@ -56,17 +62,31 @@ header nav {
     gap: 25px;
 }
 
-header nav a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
+header nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+    position:relative;
 }
 
 header nav a:hover {
-    color: var(--primary-color);
+     color:#00fff2;
+}
+header nav a::after{
+    content:"";
+    width:0;
+    height:2px;
+    background:#00fff2;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    transition:.3s;
 }
 
+header nav a:hover::after{
+    width:100%;
+}
 header nav .login-btn {
     background-color: var(--primary-color);
     color: var(--dark-bg);
