@@ -1,8 +1,11 @@
 // ==========================================================================
 // SecureCrypt - Frontend Logic
-// Talks to the Node.js gateway (server.js) at API_BASE.
+// Talks to the Node.js gateway (server.js). Using an empty string for
+// API_BASE means "same address the page was loaded from" — this way it
+// works automatically whether running locally (http://localhost:3000) or
+// after being deployed live (e.g. https://your-app.onrender.com).
 // ==========================================================================
-const API_BASE = 'http://localhost:3000';
+const API_BASE = '';
 
 // --------------------------------------------------------------------------
 // Highlight the active nav link based on the current page
