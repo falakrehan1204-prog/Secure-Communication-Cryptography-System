@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decrypt Message | SecureCrypt</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -28,25 +28,26 @@
     <div class="encrypt-form">
         <h2>Decrypt Secure Message</h2>
         <p>Paste the encrypted text and enter the secret key to retrieve the original message.</p>
-        <form>
+        <form id="decryptForm">
             <label>Encrypted Message</label>
-            <textarea rows="7" placeholder="Paste encrypted message..." required></textarea>
+            <textarea id="encryptedInput" rows="7" placeholder="Paste encrypted message..." required></textarea>
             <label>Encryption Algorithm</label>
-            <select><option>AES-256</option><option>AES-192</option><option>AES-128</option></select>
+            <select id="algorithmSelect"><option>AES-256</option><option>AES-192</option><option>AES-128</option></select>
             <label>Secret Key</label>
-            <input type="password" placeholder="Enter Secret Key" required>
+            <input id="secretKey" type="password" placeholder="Enter Secret Key" required>
+            <p id="formMessage" class="form-message"></p>
             <div class="buttons">
-                <button class="btn">Decrypt</button>
+                <button id="decryptBtn" type="submit" class="btn">Decrypt</button>
                 <button type="reset" class="btn-outline">Clear</button>
             </div>
         </form>
         <div class="output">
             <h3>Decrypted Message</h3>
-            <textarea rows="6" readonly placeholder="Original message will appear here..."></textarea>
+            <textarea id="decryptedOutput" rows="6" readonly placeholder="Original message will appear here..."></textarea>
         </div>
     </div>
 </section>
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 <footer>
     <p>© 2026 SecureCrypt | Secure Communication & Cryptography System</p>
 </footer>

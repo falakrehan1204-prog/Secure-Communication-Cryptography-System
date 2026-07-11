@@ -100,6 +100,14 @@ header nav .login-btn:hover {
     color: var(--dark-bg);
 }
 
+header nav a.active {
+    color: #00fff2;
+}
+
+header nav a.active::after {
+    width: 100%;
+}
+
 /* ==========================================================================
    3. BUTTONS
    ========================================================================== */
@@ -299,7 +307,7 @@ header nav .login-btn:hover {
 .cta {
     padding: 80px 8%;
     text-align: center;
-    background: linear-gradient(rgba(34, 40, 49, 0.8), rgba(34, 40, 49, 0.8)), url('../images/hero.jpg') no-repeat center/cover;
+    background: linear-gradient(rgba(34, 40, 49, 0.85), rgba(34, 40, 49, 0.85)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
 }
 
 .cta h2 {
@@ -556,6 +564,37 @@ header nav .login-btn:hover {
 
 .login-box .btn {
     width: 100%;
+}
+
+.demo-hint {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* ==========================================================================
+   FORM FEEDBACK MESSAGES (used by script.js on Encrypt/Decrypt/Login)
+   ========================================================================== */
+.form-message {
+    min-height: 20px;
+    margin: -8px 0 15px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+.form-message.success {
+    color: #4caf50;
+}
+
+.form-message.error {
+    color: #ff5c5c;
+}
+
+.encrypt-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 /* ==========================================================================
